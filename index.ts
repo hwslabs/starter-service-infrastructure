@@ -5,7 +5,6 @@ import ecs_patterns = require('@aws-cdk/aws-ecs-patterns');
 import cdk = require('@aws-cdk/core');
 import {ApplicationProtocol, ApplicationProtocolVersion} from "@aws-cdk/aws-elasticloadbalancingv2";
 import {HostedZone} from "@aws-cdk/aws-route53";
-import {RemovalPolicy} from "@aws-cdk/core";
 import {Environment} from "@aws-cdk/core/lib/environment";
 import {DnsValidatedCertificate} from "@aws-cdk/aws-certificatemanager";
 
