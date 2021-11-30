@@ -17,8 +17,9 @@ class {TEMPLATE_SERVICE_NAME}ServiceRepository extends cdk.Stack {
     // Create ECR repository
     this.repository = new ecr.Repository(this, '{TEMPLATE_SERVICE_HYPHEN_NAME}-service', {
       repositoryName: '{TEMPLATE_SERVICE_HYPHEN_NAME}-service',
-      removalPolicy: RemovalPolicy.DESTROY
     })
+
+    new cdk.CfnOutput(this, 'RepositoryURI', {value: this.repository.repositoryUri})
   }
 }
 
